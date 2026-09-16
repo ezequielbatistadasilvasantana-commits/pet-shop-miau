@@ -1,5 +1,5 @@
 const products=[
-  {id:'nexgard-spectra-2-3-5kg',name:'NexGard Spectra 2 a 3,5 kg',category:'saude',pet:'cao',image:'nexgard-spectra-2-a-3-5kg.png',bg:'#eee9ff',price:'R$ 105,00',description:'Antipulgas, carrapatos e vermes em comprimido para cães de 2 a 3,5 kg. Use com orientação veterinária.'},
+  {id:'nexgard-spectra-2-3-5kg',name:'NexGard Spectra 2 a 3,5 kg',category:'saude',pet:'cao',image:'nexgard-spectra-2-a-3-5kg.webp',bg:'#eee9ff',price:'R$ 105,00',description:'Antipulgas, carrapatos e vermes em comprimido para cães de 2 a 3,5 kg. Use com orientação veterinária.'},
   {id:'nexgard-4-10kg',name:'NexGard 4,1 a 10 kg',category:'saude',pet:'cao',image:'nexgard-4-a-10kg.png',bg:'#e7f4ff',price:'R$ 119,00',description:'Antipulgas e carrapatos em tablete mastigável para cães de 4,1 a 10 kg. Consulte a equipe.'},
   {id:'simparic-5-10kg',name:'Simparic 5 a 10 kg',category:'saude',pet:'cao',image:'simparic-5-a-10kg.jpg',bg:'#fff0e9',oldPrice:'R$ 109,00',price:'R$ 85,00',badge:'Promoção',description:'Comprimido contra pulgas, carrapatos e sarnas para cães de 5 a 10 kg. Use com orientação veterinária.'},
   {id:'shampoo-pet-clean-700ml',name:'Shampoo Pet Clean 700 ml',category:'higiene',pet:'todos',image:'shampoo-pet-clean-700ml.png',bg:'#e7f8f2',price:'R$ 22,00',description:'Fórmula 5 em 1 com limpeza, condicionamento, hidratação, revitalização e nutrição.'},
@@ -9,7 +9,7 @@ const products=[
   {id:'beneflora-vet',name:'Beneflora Vet',category:'saude',pet:'todos',image:'beneflora-vet.jpg',bg:'#edfae9',price:'R$ 77,50',description:'Suplemento com probióticos e prebióticos para auxiliar no equilíbrio da flora intestinal.'},
   {id:'golden-gatos-carne-10kg',name:'Golden Gatos Adultos Carne 10,1 kg',category:'alimentacao',pet:'gato',image:'golden-gatos-adulto-carne.jpg',bg:'#fff2dc',pricePrefix:'A partir de',price:'R$ 176,00',description:'Ração Premium Especial sabor carne para gatos adultos, em embalagem de 10,1 kg.'},
   {id:'golden-special-caes-15kg',name:'Golden Special Cães Adultos 15 kg',category:'alimentacao',pet:'cao',image:'golden-special-caes-adultos-15kg.jpg',bg:'#f2edff',pricePrefix:'A partir de',price:'R$ 190,00',description:'Ração Premium Especial carne e frango para cães adultos, em embalagem de 15 kg.'},
-  {id:'friskies-mix-carnes-10kg',name:'Friskies Adultos Mix de Carnes 10,1 kg',category:'alimentacao',pet:'gato',image:'friskies-adulto-mix-carnes.png',bg:'#e8f6ff',pricePrefix:'A partir de',price:'R$ 190,00',description:'Ração para gatos adultos sabor mix de carnes, em embalagem de 10,1 kg.'},
+  {id:'friskies-mix-carnes-10kg',name:'Friskies Adultos Mix de Carnes 10,1 kg',category:'alimentacao',pet:'gato',image:'friskies-adulto-mix-carnes.webp',bg:'#e8f6ff',pricePrefix:'A partir de',price:'R$ 190,00',description:'Ração para gatos adultos sabor mix de carnes, em embalagem de 10,1 kg.'},
   {id:'gran-plus-gourmet-ovelha-10kg',name:'GranPlus Gourmet Ovelha e Arroz 10,1 kg',category:'alimentacao',pet:'cao',image:'gran-plus-gourmet-ovelha.webp',bg:'#ffefe9',pricePrefix:'A partir de',price:'R$ 155,00',description:'Ração Premium Especial sabor ovelha e arroz para cães adultos, em embalagem de 10,1 kg.'}
 ];
 

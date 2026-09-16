@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5836d6">
+  <meta name="description" content="Catálogo independente da Pet Shop Miau com produtos reais, fotos, preços, filtros e atendimento pelo WhatsApp.">
+  <title>Catálogo — Pet Shop Miau</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235836d6'/%3E%3Cg fill='%23ffd447'%3E%3Ccircle cx='20' cy='21' r='7'/%3E%3Ccircle cx='44' cy='21' r='7'/%3E%3Ccircle cx='13' cy='36' r='6'/%3E%3Ccircle cx='51' cy='36' r='6'/%3E%3Cpath d='M32 27c-11 0-18 9-15 18 2 7 10 8 15 4 5 4 13 3 15-4 3-9-4-18-15-18z'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="stylesheet" href="../assets/catalog.css">
+</head>
+<body class="catalog-page">
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress-line" aria-hidden="true"><span></span></div>
+  <header class="topbar catalog-topbar" id="topbar">
+    <a class="brand" href="../" aria-label="Pet Shop Miau — página inicial">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>Pet Shop <strong>Miau</strong></span>
+    </a>
+    <nav aria-label="Navegação do catálogo">
+      <a href="../">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#como-funciona">Como pedir</a>
+    </nav>
+    <button class="cart-trigger" type="button" aria-haspopup="dialog" aria-controls="cart-panel">
+      <span>Minha lista</span><b id="cart-count">0</b>
+    </button>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="catalog-hero">
+      <div class="catalog-hero-copy reveal visible">
+        <p class="eyebrow"><span></span> Catálogo Pet Shop Miau</p>
+        <h1>Encontre o que seu pet <em>precisa.</em></h1>
+        <p>Veja produtos reais da loja com fotos e preços, monte sua lista e confirme a disponibilidade diretamente com a nossa equipe.</p>
+        <a href="#produtos" class="text-link">Explorar produtos <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="catalog-pets" aria-hidden="true">
+        <div class="catalog-orbit orbit-a"></div><div class="catalog-orbit orbit-b"></div>
+        <img src="../assets/dog.png" class="catalog-dog" alt="">
+        <img src="../assets/cat.png" class="catalog-cat" alt="">
+        <div class="hero-sticker sticker-one">Escolha</div>
+        <div class="hero-sticker sticker-two">Envie</div>
+        <div class="hero-sticker sticker-three">Pronto!</div>
+      </div>
+    </section>
+
+    <section class="catalog-shell" id="produtos">
+      <aside class="filter-panel">
+        <div class="filter-sticky">
+          <span class="filter-kicker">CATÁLOGO</span>
+          <h2>O que você procura?</h2>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+            <input id="catalog-search" type="search" placeholder="Buscar no catálogo" autocomplete="off">
+          </label>
+          <div class="filter-group" aria-labelledby="category-label">
+            <p id="category-label">Categoria</p>
+            <div class="filter-list" id="category-filters">
+              <button class="filter-chip active" type="button" data-category="todos">Todos <span>12</span></button>
+              <button class="filter-chip" type="button" data-category="alimentacao">Alimentação <span>4</span></button>
+              <button class="filter-chip" type="button" data-category="higiene">Higiene <span>3</span></button>
+              <button class="filter-chip" type="button" data-category="saude">Saúde <span>5</span></button>
+            </div>
+          </div>
+          <div class="filter-group" aria-labelledby="pet-label">
+            <p id="pet-label">Para quem?</p>
+            <div class="pet-toggle" role="group" aria-label="Filtrar por animal">
+              <button class="pet-filter active" type="button" data-pet="todos">Todos</button>
+              <button class="pet-filter" type="button" data-pet="cao">Cães</button>
+              <button class="pet-filter" type="button" data-pet="gato">Gatos</button>
+            </div>
+          </div>
+          <p class="availability-note"><span aria-hidden="true">●</span> Fotos e preços do catálogo atual. Disponibilidade confirmada pelo WhatsApp.</p>
+        </div>
+      </aside>
+
+      <div class="products-area">
+        <div class="products-toolbar">
+          <div><strong id="result-count">12 produtos</strong><span> selecionados da loja</span></div>
+          <button class="mobile-filter-button" type="button" aria-expanded="false">Filtros <span>⌄</span></button>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-catalog" id="empty-catalog" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>Nenhum item encontrado</h3>
+          <p>Tente outro termo ou limpe os filtros.</p>
+          <button type="button" id="clear-filters">Limpar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-flow" id="como-funciona">
+      <div class="flow-heading reveal">
+        <p class="eyebrow light"><span></span> Simples e pessoal</p>
+        <h2>Do catálogo ao WhatsApp<br><em>em três passos.</em></h2>
+      </div>
+      <ol class="flow-steps">
+        <li class="reveal"><b>01</b><div><h3>Encontre</h3><p>Use a busca e os filtros para localizar os produtos que deseja.</p></div></li>
+        <li class="reveal"><b>02</b><div><h3>Monte sua lista</h3><p>Adicione os itens e revise tudo antes de enviar.</p></div></li>
+        <li class="reveal"><b>03</b><div><h3>Fale com a Miau</h3><p>A equipe confirma marcas, tamanhos, preços e disponibilidade.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="catalog-help reveal">
+      <div><span class="help-bubble" aria-hidden="true">?</span><div><h2>Não encontrou o que procura?</h2><p>Conte para a equipe. A gente ajuda a encontrar a melhor opção para seu pet.</p></div></div>
+      <a class="button button-yellow shimmer-button" href="https://wa.me/5583987464150?text=Olá%2C%20Pet%20Shop%20Miau!%20Não%20encontrei%20o%20produto%20que%20procuro." target="_blank" rel="noopener">Perguntar no WhatsApp <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer catalog-footer">
+    <div class="footer-brand"><span class="brand-mark">M</span><span>Pet Shop <strong>Miau</strong></span></div>
+    <p>R. Arábia, 83 — Bairro das Indústrias, João Pessoa.</p>
+    <div class="footer-links"><a href="../">Início</a><a href="#produtos">Produtos</a><a href="#como-funciona">Como pedir</a></div>
+    <small>© <span id="year"></span> Pet Shop Miau. Catálogo sujeito à disponibilidade.</small>
+  </footer>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <section class="cart-panel" id="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-head"><div><span>SUA SELEÇÃO</span><h2 id="cart-title">Minha lista</h2></div><button type="button" class="cart-close" aria-label="Fechar lista">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span aria-hidden="true">♡</span><p>Sua lista ainda está vazia.</p><small>Adicione produtos para consultar com a equipe.</small></div>
+    <div class="cart-footer">
+      <p>Os valores exibidos podem mudar. A equipe confirma disponibilidade e preço final.</p>
+      <a id="send-list" class="button" href="#" target="_blank" rel="noopener">Enviar lista no WhatsApp <span>↗</span></a>
+    </div>
+  </section>
+
+  <div class="selection-toast" id="selection-toast" role="status" aria-live="polite">Adicionado à sua lista</div>
+  <script src="../assets/catalog.js"></script>
+</body>
+</html>
